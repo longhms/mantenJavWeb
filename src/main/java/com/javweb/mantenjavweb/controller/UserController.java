@@ -31,10 +31,10 @@ public class UserController {
   * author: [ntlong]
   * @return List<User>: danh sach tat ca User
   * */
- @GetMapping
+ /*@GetMapping
  public List<User> getAllUsers() {
   return userRepository.findAll();
- }
+ }*/
 
  /**
   * goi user co id la {id} bang repository
@@ -53,13 +53,13 @@ public class UserController {
   * @RequestParam(defaultValue = "20") int size: so luong ban ghi tren 1 trang (default la 20)
   * @return Page<User>: danh sach User trong 1 trang
   * */
- /*@GetMapping
+ @GetMapping
  public Page<User> getAllUsers(
          @RequestParam(defaultValue = "0") int page,
          @RequestParam(defaultValue = "20") int size
  ) {
   return userRepository.findAll(PageRequest.of(page, size));
- }*/
+ }
  /**
   * tao User moi
   * author: [ntlong]
